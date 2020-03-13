@@ -88,7 +88,7 @@ const commands: Array<ICommand> = [
         type: OutputType.link,
         prepend: "├── ",
         text: "CS:GO config",
-        link: "https://csgo-cfg.catalysm.net/"
+        link: "https://github.com/niekcandaele/Catalysm-CSGO-config"
       },
       {
         type: OutputType.link,
