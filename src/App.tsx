@@ -4,6 +4,16 @@ import Command from "./components/command";
 
 import commands from "./commands";
 
+const images = [
+  "daniel-leone-v7daTKlZzaw-unsplash.jpg",
+  "nasa-Q1p7bh3SHj8-unsplash.jpg",
+  "jonatan-pie-h8nxGssjQXs-unsplash.jpg",
+  "krista-mangulsone-9gz3wfHr65U-unsplash.jpg"
+];
+
+document.body.style["backgroundImage"] =
+  "url(/img/" + images[Math.floor(Math.random() * images.length)] + ")";
+
 function App() {
   const addNewCommand = () => {
     if (!commands[commandIndex]) {

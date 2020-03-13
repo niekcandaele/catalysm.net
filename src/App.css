@@ -23,9 +23,7 @@
   margin-bottom: 0px;
 }
 
-html {
-  background: url(/img/daniel-leone-v7daTKlZzaw-unsplash.jpg) no-repeat center
-    center fixed;
+body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
