@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Command from "./components/command";
+
+import commands from "./commands";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const addNewCommand = () => {
+    if (!commands[commandIndex]) {
+      return;
+    }
+
+    _commandComponents.push(getCommandComponent());
+    setCommandComponents([..._commandComponents]);
+  };
+
+  let commandIndex = 0;
+  const _commandComponents: JSX.Element[] = [getCommandComponent()];
+  const [commandComponents, setCommandComponents] = useState(
+    _commandComponents
   );
+
+  function getCommandComponent() {
+    const command = commands[commandIndex];
+    commandIndex++;
+    return (
+      <Command
+        key={commandIndex}
+        prompt={command.prompt}
+        command={command.command}
+        delay={command.delay}
+        output={command.output}
+        onFinish={addNewCommand}
+      ></Command>
+    );
+  }
+
+  return <div className="App">{commandComponents}</div>;
 }
 
 export default App;
