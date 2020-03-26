@@ -45,7 +45,18 @@ function App() {
     );
   }
 
-  return <div className="App">{commandComponents}</div>;
+  return (
+    <div className="App">
+      <div className="terminal">
+        <div className="terminalMenu">
+          <div className="terminalButtons terminalClose"></div>
+          <div className="terminalButtons terminalMinimize"></div>
+          <div className="terminalButtons terminalZoom"></div>
+        </div>
+        <div className="terminalScreen">{commandComponents}</div>
+      </div>
+    </div>
+  );
 }
 
 export default App;
