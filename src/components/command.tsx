@@ -35,7 +35,7 @@ export default function Command({
           case OutputType.text:
             return (
               <div key={o.text} className="output">
-                {o.text}
+                {o.prepend} {o.text}
               </div>
             );
           case OutputType.link:

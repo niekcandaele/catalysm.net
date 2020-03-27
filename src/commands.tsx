@@ -1,5 +1,27 @@
 import { FaGithub, FaDiscord, FaPatreon } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
+import {
+  DiBootstrap,
+  DiCss3,
+  DiDebian,
+  DiDocker,
+  DiDotnet,
+  DiGit,
+  DiJava,
+  DiJavascript1,
+  DiJqueryLogo,
+  DiLaravel,
+  DiLinux,
+  DiMysql,
+  DiNginx,
+  DiNodejsSmall,
+  DiNpm,
+  DiPostgresql,
+  DiPython,
+  DiRasberryPi,
+  DiReact,
+  DiRedis
+} from "react-icons/di";
 import React from "react";
 
 export interface ICommand {
@@ -10,7 +32,7 @@ export interface ICommand {
 }
 
 export interface IOutputLine {
-  text: string;
+  text?: string;
   prepend?: string | JSX.Element;
   type: OutputType;
   link?: string;
@@ -18,7 +40,8 @@ export interface IOutputLine {
 
 export enum OutputType {
   link,
-  text
+  text,
+  element
 }
 
 const commands: Array<ICommand> = [
@@ -95,6 +118,117 @@ const commands: Array<ICommand> = [
         prepend: "└── ",
         text: "CS:GO RankMe interface",
         link: "https://github.com/niekcandaele/CSGO-RankMe-stats"
+      }
+    ]
+  },
+  {
+    command: "cat technologies.txt",
+    prompt: "niek@homeserver:~/code$",
+    delay: 250,
+    output: [
+      {
+        type: OutputType.text,
+        text: "Some of the technologies I've used in the past"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiBootstrap />,
+        text: "Bootstrap"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiCss3 />,
+        text: "CSS"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiDebian />,
+        text: "Debian"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiDocker />,
+        text: "Docker"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiDotnet />,
+        text: ".NET"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiGit />,
+        text: "Git"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiJava />,
+        text: "Java"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiJavascript1 />,
+        text: "Javascript"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiJqueryLogo />,
+        text: "jQuery"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiLaravel />,
+        text: "Laravel"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiLinux />,
+        text: "Linux"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiMysql />,
+        text: "MySQL"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiNginx />,
+        text: "Nginx"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiNodejsSmall />,
+        text: "Nodejs"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiNpm />,
+        text: "NPM"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiPostgresql />,
+        text: "PostgreSQL"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiPython />,
+        text: "Python"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiRasberryPi />,
+        text: "Raspberry Pi"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiReact />,
+        text: "React"
+      },
+      {
+        type: OutputType.text,
+        prepend: <DiRedis />,
+        text: "Redis"
       }
     ]
   }
