@@ -19,7 +19,7 @@ export interface IOutputLine {
 export enum OutputType {
   link,
   text,
-  element
+  element,
 }
 
 const commands: Array<ICommand> = [
@@ -27,7 +27,7 @@ const commands: Array<ICommand> = [
     prompt: "niek@tux:~$",
     command: "ssh homeserver",
     delay: 250,
-    output: []
+    output: [],
   },
   {
     command: "cat links.txt",
@@ -37,32 +37,32 @@ const commands: Array<ICommand> = [
         link: "mailto:niek@candaele.dev",
         type: OutputType.link,
         text: "niek@candaele.dev",
-        prepend: <FiMail />
+        prepend: <FiMail />,
       },
       {
         link: "https://github.com/niekcandaele",
         type: OutputType.link,
         text: "Github",
-        prepend: <FaGithub />
+        prepend: <FaGithub />,
       },
       {
         link: "https://aka.candaele.dev/discord/",
         type: OutputType.link,
         text: "Discord",
-        prepend: <FaDiscord />
+        prepend: <FaDiscord />,
       },
       {
         link: "https://blog.candaele.dev/",
         type: OutputType.link,
         text: "Blog",
-        prepend: <FiFileText />
-      }
-    ]
+        prepend: <FiFileText />,
+      },
+    ],
   },
   {
     command: "cd code",
     delay: 250,
-    output: []
+    output: [],
   },
   {
     command: "tree projects -L 1",
@@ -71,28 +71,34 @@ const commands: Array<ICommand> = [
     output: [
       {
         type: OutputType.text,
-        text: "projects"
+        text: "projects",
       },
       {
         type: OutputType.link,
         prepend: "├── ",
-        text: "CSMM",
-        link: "https://csmm.app"
+        text: "CSMM - a gameserver manager",
+        link: "https://csmm.app",
       },
       {
         type: OutputType.link,
         prepend: "├── ",
-        text: "Ban notifier",
-        link: "https://github.com/Bantr"
+        text: "Feature creep - SCRUM healthchecks. Winner of Redis hackathon 2021",
+        link: "https://github.com/niekcandaele/feature-creep",
+      },
+      {
+        type: OutputType.link,
+        prepend: "├── ",
+        text: "Bantr - Analytics and notifications for CS:GO",
+        link: "https://github.com/Bantr",
       },
       {
         type: OutputType.link,
         prepend: "└── ",
         text: "CS:GO RankMe interface",
-        link: "https://github.com/niekcandaele/CSGO-RankMe-stats"
-      }
-    ]
-  }
+        link: "https://github.com/niekcandaele/CSGO-RankMe-stats",
+      },
+    ],
+  },
 ];
 
 export default commands;
