@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaDiscord, FaGithub } from 'react-icons/fa';
+import { FaDiscord, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { FiFileText, FiMail } from 'react-icons/fi';
 
 export interface ICommand {
@@ -38,6 +38,12 @@ const commands: Array<ICommand> = [
         type: OutputType.link,
         text: "niek@candaele.dev",
         prepend: <FiMail />,
+      },
+      {
+        link: "https://www.linkedin.com/in/niek-candaele/",
+        type: OutputType.link,
+        text: "LinkedIn",
+        prepend: <FaLinkedinIn />,
       },
       {
         link: "https://github.com/niekcandaele",
